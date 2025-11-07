@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %> Survey</title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ffecd2, #fcb69f);
+        color: #333;
+        margin: 0;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      h1 {
+        color: #ff6f61;
+        margin-bottom: 1rem;
+      }
+
+      form {
+        background: white;
+        display: inline-block;
+        padding: 2rem 3rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 0.3rem;
+      }
+
+      input[type="submit"] {
+        background: linear-gradient(90deg, #ff6f61, #ff9a76);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.6rem 1.5rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.2s;
+      }
+
+      input[type="submit"]:hover {
+        opacity: 0.9;
+      }
+
+      br {
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is the survey page</h1>
+    <form method="POST" action="/survey_results">
+      Please fill in this form to register<br><br>
+      Rating out of 10:<br>
+      <input id="rating" type="number" name="rating" min="1" max="10" /><br><br>
+      Comment:<br>
+      <input id="comment" type="text" name="comment" /><br><br>
+      <input type="submit" value="OK" />
+    </form>
+  </body>
+</html>
