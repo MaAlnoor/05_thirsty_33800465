@@ -1,6 +1,6 @@
 // Define our data
 var shopData = {shopName: "Smooth Smoothies", 
-                productCategories:["Beer", "Wine", "Soft Drinks", "Hot Drinks"]
+                productCategories:["Strawberry Banana", "Berry Blast", "Tropical Mango Pineapple", "Green Power","Pina Colada","Chocolate Banana Protein","Carrot Ginger","Peach Sunrise"]
 };
 
 // Create a new router
@@ -32,6 +32,14 @@ router.get("/register", (req,res) => {
 router.post("/registered", (req,res) => { 
     res.send(' Hello '+ req.body.first + ' '+ req.body.last +' you are now registered! We will send a confirmation email to '+ req.body.email);
 }); 
+
+router.get("/survey", (req,res) => {
+    res.render("survey.ejs", shopData); 
+});
+
+router.post("/survey_results", (req,res) => {
+    res.send('Thank you for taking the survey! You rated us a '+ req.body.rating + ' and commented: "'+ req.body.comment +'"');
+});
 
 
 // Export the router object so index.js can access it
