@@ -1,15 +1,71 @@
 <!doctype html>
 <html>
   <head>
-    <title><%=shopName%> Search</title>
+    <title><%= shopName %> Search</title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ffecd2, #fcb69f);
+        color: #333;
+        margin: 0;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      h1 {
+        color: #ff6f61;
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        color: #ff9a76;
+        margin-bottom: 1.5rem;
+      }
+
+      form {
+        background: white;
+        display: inline-block;
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      input[type="text"] {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid #ccc;
+        margin: 0.3rem 0.8rem 0.3rem 0;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background: linear-gradient(90deg, #ff6f61, #ff9a76);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      input[type="submit"]:hover {
+        opacity: 0.9;
+      }
+    </style>
   </head>
+
   <body>
-    <h1><%=shopName%> Search</h1>
-    <h2>Search The <%=shopName%> Shop:</h2>
+    <h1><%= shopName %> Search</h1>
+    <h2>Search The <%= shopName %> Shop:</h2>
+
     <form action="/search_result" method="GET">
-        Name:<input id="search_box" type="text" name="search_text">
-        Category:<input id="category_box" type="text" name="category">
-        <input type="submit" value="OK" >
-      </form>      
+      Name:
+      <input id="search_box" type="text" name="search_text" placeholder="Enter name...">
+      Category:
+      <input id="category_box" type="text" name="category" placeholder="Enter category...">
+      <input type="submit" value="OK">
+    </form>
   </body>
 </html>
