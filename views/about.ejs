@@ -1,10 +1,43 @@
 <!doctype html>
 <html>
   <head>
-    <title>The <%=shopName%></title>
+    <title>The <%= shopName %></title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ffecd2, #fcb69f);
+        color: #333;
+        margin: 0;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      h1 {
+        color: #ff6f61;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        background: white;
+        display: inline-block;
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-size: 1.1rem;
+        color: #555;
+        max-width: 500px;
+        line-height: 1.6;
+      }
+
+      p:hover {
+        background: #fff7f2;
+        transition: 0.2s;
+      }
+    </style>
   </head>
+
   <body>
-    <h1>About The <%=shopName%> Shop</h1>
-    <p>We sell all sorts of drinks</p>
+    <h1>About The <%= shopName %> Shop</h1>
+    <p>We sell all sorts of delicious, refreshing drinks made from the freshest fruits and natural ingredients. 🍓🥭🍌</p>
   </body>
 </html>
